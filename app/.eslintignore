@@ -1,0 +1,15 @@
+.vscode
+
+.gitignore
+
+.next
+build
+node_modules
+public
+
+*.config.*
+
+ios
+android
+
+temp.ts
