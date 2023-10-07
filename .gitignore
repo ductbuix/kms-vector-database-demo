@@ -6,3 +6,5 @@ backend/flaskr/utils/New_Medium_Data.csv
 *.pyo
 
 .vscode
+.venv
+.env
