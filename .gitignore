@@ -6,3 +6,11 @@ backend/flaskr/utils/New_Medium_Data.csv
 *.pyo
 
 .vscode
+
+# image search
+backend/flaskr/utils/reverse_image_search.csv
+backend/flaskr/utils/reverse_image_search.zip
+backend/flaskr/utils/exception
+backend/flaskr/utils/object
+backend/flaskr/utils/test
+backend/flaskr/utils/train
