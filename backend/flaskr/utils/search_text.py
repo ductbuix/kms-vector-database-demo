@@ -5,7 +5,7 @@ from towhee import pipe, ops
 search_pipe = (pipe.input('query')
                     .map('query', 'vec', ops.text_embedding.dpr(model_name="facebook/dpr-ctx_encoder-single-nq-base"))
                     .map('vec', 'vec', lambda x: x / np.linalg.norm(x, axis=0))
-                    .flat_map('vec', ('id', 'score', 'title'), ops.ann_search.milvus_client(host='127.0.0.1', 
+                    .flat_map('vec', ('id', 'score', 'title'), ops.ann_search.milvus_client(host='localhost', 
                                                                                    port='19530',
                                                                                    collection_name='search_article_in_medium',
                                                                                    output_fields=['title']))  
@@ -18,7 +18,7 @@ search_pipe__with_expression = (pipe.input('query')
                     .map('query', 'vec', ops.text_embedding.dpr(model_name="facebook/dpr-ctx_encoder-single-nq-base"))
                     .map('vec', 'vec', lambda x: x / np.linalg.norm(x, axis=0))
                     .flat_map('vec', ('id', 'score', 'title', 'link', 'reading_time', 'publication', 'claps', 'responses'), 
-                                       ops.ann_search.milvus_client(host='127.0.0.1', 
+                                       ops.ann_search.milvus_client(host='localhost', 
                                                                     port='19530',
                                                                     collection_name='search_article_in_medium',
                                                                     expr='title like "Python%"',
