@@ -15,3 +15,7 @@ backend/flaskr/utils/object
 backend/flaskr/utils/test
 backend/flaskr/utils/train
 backend/flaskr/images
+
+#env
+.venv
+.env
