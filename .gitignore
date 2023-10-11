@@ -14,3 +14,4 @@ backend/flaskr/utils/exception
 backend/flaskr/utils/object
 backend/flaskr/utils/test
 backend/flaskr/utils/train
+backend/flaskr/images
