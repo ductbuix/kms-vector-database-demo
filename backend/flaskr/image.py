@@ -33,7 +33,7 @@ def search():
         res = p_search_pre_yolo(image_path)
         result = []
         for r in  DataCollection(res).to_list():
-            result.append(r.pred)
+            result.extend(r.pred)
         return { "result":  result }
     else:
         jsonify({ "message": "File is not allowed"}), 400
