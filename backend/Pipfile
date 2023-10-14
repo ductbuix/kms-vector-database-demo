@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 flask = "*"
+flask-cors = "*"
 towhee = "*"
 urllib3 = "==1.26.6"
 
