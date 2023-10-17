@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { TextSearch } from '@/types/TextSearch'
+import { TextSearch } from '@/types/common'
 import SearchForm from './components/SearchForm'
 import SearchResult from './components/SearchResult'
 

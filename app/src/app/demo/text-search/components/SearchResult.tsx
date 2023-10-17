@@ -1,4 +1,4 @@
-import { TextSearch } from '@/types/TextSearch'
+import { TextSearch } from '@/types/common'
 
 interface SearchResultProps {
   results: TextSearch[]

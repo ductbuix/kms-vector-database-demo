@@ -3,3 +3,7 @@ export interface TextSearch {
   score: number
   title: string
 }
+
+export interface ImageSearch {
+  result: string[]
+}
