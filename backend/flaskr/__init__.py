@@ -2,8 +2,12 @@ from flask import Flask
 from flask_cors import CORS
 
 UPLOAD_FOLDER = 'images'
+PDF_UPLOAD_FOLDER = 'files'
+TXT_UPLOAD_FOLDER = 'files'
 IMAGE_RESULT_FOLDER = 'utils'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'pdf', 'txt'}
+PDF_ALLOWED_EXTENSIONS = {'pdf'}
+TXT_ALLOWED_EXTENSIONS = {'txt'}
 
 
 def create_app(test_config=None):
@@ -20,8 +24,8 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
-    from flaskr import text, image
+    from flaskr import text, image, pdf
     app.register_blueprint(text.bp)
     app.register_blueprint(image.bp)
+    app.register_blueprint(pdf.bp)
     return app
-

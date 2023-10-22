@@ -8,6 +8,10 @@ flask = "*"
 flask-cors = "*"
 towhee = "*"
 urllib3 = "==1.26.6"
+langchain = "*"
+langchainhub = "*"
+pypdf = "*"
+validators = "*"
 
 [dev-packages]
 
