@@ -41,3 +41,48 @@ Query Param: text
 - In Insomnia you can use 'http://localhost:5000' to access backend
 - But on browser, must use http://127.0.0.1:500 
 ![Alt text](./note-images/browser_image.png)
+
+# 7. Chat with our docs
+## 6.1 Set up
+- Update python packages:
+    ```bash
+    pipenv install
+    ```
+- Ollama -> run LLM (Llamma2) locally
+    - Install Ollama https://github.com/jmorganca/ollama
+    - Pull llama2
+    - Start Ollama
+## 6.2 Some info:
+- pdf:
+    + Milvus Collection: pdf
+    + Import PDF docs:
+        - Method: POST
+        - URL: http://localhost:5000/docs/import-pdf
+        - Multipart Form Data Field: file
+- txt
+    + Milvus Collection: txt
+    + Import txt docs:
+        - Method: POST
+        - URL: http://localhost:5000/docs/import-txt
+        - Multipart Form Data Field: file
+- web
+    + Milvus Collection: web
+    + Import web docs:
+        - Method: POST
+        - URL: http://localhost:5000/docs/import-web
+        - JSON Body Data: { "url": "https://kms-technology.com" }
+- Retrieve docs:
+    - Method: POST
+    - URL: http://localhost:5000/docs/retrieve
+    - Query Params:
+        + question: string
+        + collection_name: string (must be one of ['txt', 'pdf', 'web'])
+## 6.3 Test Web Docs
+- Retrieve before emdeding docs
+![Alt text](./note-images/kms-before-emded.png)
+- Import docs from web url
+![Alt text](./note-images/embed-kms-link.png)
+- Retrieve kms info
+![Alt text](./note-images/retrieve-kms-after-embeding.png)
+## 6.4 Test PDF
+## 6.5 Test Txt

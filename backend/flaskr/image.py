@@ -1,12 +1,10 @@
 import os
-from markupsafe import escape
 from flask import ( Blueprint, request, jsonify, send_file )
 from werkzeug.utils import secure_filename
 
-from towhee import DataCollection
-
 from flaskr.utils.search_image import p_search_pre_yolo
 from flaskr import ALLOWED_EXTENSIONS, UPLOAD_FOLDER, IMAGE_RESULT_FOLDER
+from towhee import DataCollection
 
 bp = Blueprint('image', __name__, url_prefix='/images')
 

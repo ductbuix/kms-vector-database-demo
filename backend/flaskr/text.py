@@ -1,11 +1,9 @@
 from flask import ( Blueprint, request, jsonify )
-
-
+from flaskr.utils.search_text import search_pipe
 from towhee import DataCollection
 
-from flaskr.utils.search_text import search_pipe
-
 bp = Blueprint('text', __name__, url_prefix='/text')
+
 
 @bp.route('', methods=('GET', 'POST'))
 def search():
